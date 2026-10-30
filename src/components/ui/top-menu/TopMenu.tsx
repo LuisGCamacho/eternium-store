@@ -9,7 +9,7 @@ export const TopMenu = () => {
         {/* Logo */}
         <div>
             <Link href={"/"}></Link>
-            <span className={`${ titleFont.className } font-bold `}>Eternium Store</span>
+            <span className={`${ titleFont.className } font-bold `}>ETERNIUM</span>
         </div>
 
         {/* Center Menu */}
