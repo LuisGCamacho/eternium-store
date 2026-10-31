@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export const PageNotFound = () => {
   return (
-    <div className="flex flex-col md:flex-row min-h-[calc(100dvh-80px)] w-full justify-center items-center">
+    <div className="flex flex-col md:flex-row w-full justify-center items-center">
       <div className="text-center px-5 mx-5">
         <h2 className={`${titleFont.className} text-7xl`}>
           404
