@@ -48,19 +48,17 @@ const menuItemsAdmin = [
 
 ]
 
-
-
 export const Sidebar = () => {
+
     const isSideMenuOpen = useUIStore( state => state.isSideMenuOpen )
     const closeMenu = useUIStore( state => state.closeSideMenu )
-
 
   return (
     <div>
       {/* Background black */}
       {
         isSideMenuOpen &&(
-            <div className="fixed top-0 left-0 w-screen h-screen z-10 bg-black opacity-30"></div>
+            <div className="fixed top-0 left-0 w-screen h-screen z-10 bg-black opacity-20"></div>
         )
       }
       

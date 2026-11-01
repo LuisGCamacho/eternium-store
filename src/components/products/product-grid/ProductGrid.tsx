@@ -1,6 +1,7 @@
 import { Product } from "@/src/interfaces"
 import { ProductGridItem } from "./ProductGridItem"
 
+
 interface Props {
     products: Product[]
 }
@@ -12,7 +13,7 @@ export const ProductGrid = ({ products }: Props) => {
         {
             /* Show products */
             products.map(product => (
-                <ProductGridItem key={product.slug} product={product}/>
+                <ProductGridItem key={product.title} product={product}/>
             ))
         }
     </div>

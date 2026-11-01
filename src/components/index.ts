@@ -1,5 +1,11 @@
 
+// Product
+export * from "./product/size-selector/SizeSelector"
+export * from "./product/quantity-selector/QuantitySelector"
+export * from "./product/slideshow/ProductSlideshow"
+
 // Products
+export * from "./products/product-grid/ProductGrid"
 export * from "./products/product-grid/ProductGrid"
 
 // UI

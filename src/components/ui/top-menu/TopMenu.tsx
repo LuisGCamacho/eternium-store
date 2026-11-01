@@ -15,15 +15,17 @@ export const TopMenu = () => {
     <nav className='flex px-5 justify-between items-center w-full'>
         {/* Logo */}
         <div>
-            <Link href={"/"}></Link>
-            <span className={`${ titleFont.className } font-bold cursor-pointer`}>ETERNIUM</span>
+            <Link href={"/"}>
+              <span className={`${ titleFont.className } font-bold cursor-pointer`}>ETERNIUM</span>
+            </Link>
         </div>
 
         {/* Center Menu */}
         <div className='hidden sm:block'>
+          <Link className='m-2 p-2 rounded-md transition-all hover:bg-gray-100' href={"/"}> Todos </Link>
           <Link className='m-2 p-2 rounded-md transition-all hover:bg-gray-100' href={"/category/men"}> Hombres </Link>
-          <Link className='m-2 p-2 rounded-md transition-all hover:bg-gray-100' href={"/category/woman"}> Mujeres </Link>
-          <Link className='m-2 p-2 rounded-md transition-all hover:bg-gray-100' href={"/category/kids"}> Niños </Link>
+          <Link className='m-2 p-2 rounded-md transition-all hover:bg-gray-100' href={"/category/women"}> Mujeres </Link>
+          <Link className='m-2 p-2 rounded-md transition-all hover:bg-gray-100' href={"/category/kid"}> Niños </Link>
         </div>
 
         {/* Search, Cart*, Menu*/}
