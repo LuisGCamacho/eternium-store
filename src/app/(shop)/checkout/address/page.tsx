@@ -1,8 +1,106 @@
 
-export default function() {
+import { Title } from '@/src/components';
+import Link from 'next/link';
+
+export default function NamePage() {
   return (
-    <div>
-      <h1>Address Page</h1>
+    <div className="flex flex-col sm:justify-center sm:items-center mb-30 px-10 sm:px-0">
+
+      <div className="w-full  xl:w-[1000px] flex flex-col justify-center text-left">
+        
+        {/* Title */}
+        <Title title="Dirección" subtitle="Dirección de entrega" />
+
+        <div className="grid grid-cols-1 gap-2 sm:gap-5 sm:grid-cols-2">
+
+          {/* Name */}
+          <div className="flex flex-col mb-2 ">
+            <span>Nombres</span>
+            <input 
+              type="text" 
+              className="p-2 rounded-md bg-gray-300 outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          {/* Last name */}
+          <div className="flex flex-col mb-2">
+            <span>Apellidos</span>
+            <input 
+              type="text" 
+              className="p-2 rounded-md bg-gray-300 outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          {/* Address 1 */}
+          <div className="flex flex-col mb-2">
+            <span>Dirección</span>
+            <input 
+              type="text" 
+              className="p-2 rounded-md bg-gray-300 outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          {/* Address 2 */}
+          <div className="flex flex-col mb-2">
+            <span>Dirección 2 (opcional)</span>
+            <input 
+              type="text" 
+              className="p-2 rounded-md bg-gray-300 outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          {/* Postal code */}
+          <div className="flex flex-col mb-2">
+            <span>Código postal</span>
+            <input 
+              type="text" 
+              className="p-2 rounded-md bg-gray-300 outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          {/* City */}
+          <div className="flex flex-col mb-2">
+            <span>Ciudad</span>
+            <input 
+              type="text" 
+              className="p-2 rounded-md bg-gray-300 outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          {/* Country */}
+          <div className="flex flex-col mb-2">
+            <span>País</span>
+            <select 
+              className="p-2 rounded-md bg-gray-300 outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="">[ Seleccione ]</option>
+              <option value="CRI">Costa Rica</option>
+            </select>
+          </div>
+
+          {/* Tel */}
+          <div className="flex flex-col mb-2">
+            <span>Teléfono</span>
+            <input 
+              type="text" 
+              className="p-2 rounded-md bg-gray-300 outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+
+          {/* Next button */}
+          <div className="flex flex-col mb-2 sm:mt-10">
+            <Link 
+              href='/checkout'
+              className="btn-primary flex w-full sm:w-1/2 justify-center ">
+              Siguiente
+            </Link>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
   );
 }
