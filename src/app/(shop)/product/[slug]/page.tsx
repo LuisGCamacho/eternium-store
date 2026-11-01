@@ -1,4 +1,4 @@
-import { ProductSlideshow, QuantitySelector, SizeSelector } from "@/src/components";
+import { ProductMobileSlideshow, ProductSlideshow, QuantitySelector, SizeSelector } from "@/src/components";
 import { titleFont } from "@/src/config/fonts";
 import { initialData } from "@/src/seed/seed";
 import { notFound } from "next/navigation";
@@ -33,11 +33,25 @@ async function ProductContent({ params }: Props) {
   }
   
   return (
-    <section className="mt-5 mb-20 grid md:grid-cols-3 gap-3">
-      
-      {/* Slideshow */}
-      <div className="col-span-1 md:col-span-2">
-        <ProductSlideshow title={product.title} images={product.images}/>
+    <div className="mt-5 mb-20 grid md:grid-cols-3 gap-3">
+
+      {/* Slideshows */}
+      <div className="col-span-1 md:col-span-2 ">
+
+        {/* Mobile Slideshow */}
+        <ProductMobileSlideshow 
+          title={ product.title } 
+          images={ product.images }
+          className="block md:hidden"
+          />
+
+        {/* Desktop Slideshow */}
+        <ProductSlideshow 
+          title={ product.title}  
+          images={ product.images }
+          className="hidden md:block"
+        />
+
       </div>
 
       {/* Details */}
@@ -67,6 +81,6 @@ async function ProductContent({ params }: Props) {
       </div>
 
 
-    </section>
+    </div>
   );
 }
