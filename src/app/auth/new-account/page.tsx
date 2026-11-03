@@ -1,11 +1,61 @@
-import Image from "next/image";
-import { titleFont } from "../../../config/fonts";
 
-export default function Home() {
+import { titleFont } from '@/src/config/fonts';
+import Link from 'next/link';
+
+export default function () {
   return (
-    <div>
-      <h1 className={titleFont.className}>Hola mundo</h1>
-      <h1>New Account</h1>
+    <div className="flex flex-col min-h-screen pt-32 sm:pt-42">
+
+      {/* Title */}
+      <h1 className={ `${ titleFont.className } text-4xl mb-5` }>Nueva cuenta</h1>
+
+      <div className="flex flex-col">
+
+        {/* Name */}
+        <label htmlFor="email">Nombre completo</label>
+        <input
+          className="px-5 py-2 outline-none focus:ring-2 focus:ring-blue-500 bg-gray-200 rounded mb-5"
+          type="text" 
+        />
+
+        {/* Email */}
+        <label htmlFor="email">Correo electrónico</label>
+        <input
+          className="px-5 py-2 outline-none focus:ring-2 focus:ring-blue-500 bg-gray-200 rounded mb-5"
+          type="email" 
+        />
+
+        {/* Password */}
+        <label htmlFor="email">Contraseña</label>
+        <input
+          className="px-5 py-2 outline-none focus:ring-2 focus:ring-blue-500 bg-gray-200 rounded mb-5"
+          type="email" 
+        />
+
+        {/* new account button */}
+        <button
+          className="btn-primary">
+          Crear cuenta
+        </button>
+
+
+        {/* divisor line */}
+        <div className="flex items-center my-5">
+            <div className="flex-1 border-t border-gray-500"></div>
+
+            <div className="px-2 text-gray-800">O</div>
+
+            <div className="flex-1 border-t border-gray-500"></div>
+        </div>
+
+        {/* Login button */}
+        <Link
+          href="/auth/login" 
+          className="btn-secondary text-center">
+          Login
+        </Link>
+
+      </div>
     </div>
   );
 }

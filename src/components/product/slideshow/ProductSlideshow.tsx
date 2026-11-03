@@ -86,7 +86,7 @@ export const ProductSlideshow = ( { images, title, className }: Props ) => {
                 height={ 300 }
                 src={ `/products/${ image }` }
                 alt={ title }
-                className="rounded-lg object-fill"
+                className="rounded-lg object-fill cursor-pointer"
               />
             </SwiperSlide>
 
