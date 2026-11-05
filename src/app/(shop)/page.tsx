@@ -1,18 +1,27 @@
-import { ProductGrid, Title } from "@/src/components";
-import { initialData } from "@/src/seed/seed";
+import { Products, Title } from "@/src/components";
+import { Suspense } from "react";
 
-const products = initialData.products
+interface Props {
+  searchParams: Promise<{
+    page?: string;
+  }>;
+}
 
-export default function Home() {
+export default function Home({ searchParams }: Props) {
+
   return (
     <>
+      {/* Main title */}
       <Title 
         title="Tienda" 
         subtitle="Todos los productos"
         className="mb-1"
       />
 
-      <ProductGrid products={ products }/>
+      {/* Main Products */}
+      <Suspense fallback={<p>Loading products...</p>}>
+        <Products searchParams={ searchParams } />
+      </Suspense>
     </>
   );
 }

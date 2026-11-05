@@ -8,6 +8,7 @@ export * from "./product/slideshow/ProductMobileSlideshow"
 // Products
 export * from "./products/product-grid/ProductGrid"
 export * from "./products/product-grid/ProductGrid"
+export * from "./products/Products"
 
 // UI
 export * from "./ui/top-menu/TopMenu"
